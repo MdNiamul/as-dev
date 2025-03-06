@@ -1,0 +1,19 @@
+.circle-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: conic-gradient(red, yellow, green, blue);
+    cursor: pointer;
+}
+
+
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none;  
+}
+
+.scrollbar-hidden {
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+
