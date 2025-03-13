@@ -20,7 +20,8 @@
                 <div class="flex justify-between items-center content-between gap-2">
                     <div class="counter-container bg-gray-200 rounded-lg">
                         <input type="checkbox" class="checkbox">
-                        <span onclick="incrementi()" id="counter">24</span>
+                        <!-- <h1 class="text-2xl font-bold mb-4">: <span id="increaseCounter">5</span></h1> -->
+                        <span class="text-1xl font-semibold" id="increaseCounter">24</span>
                     </div>
                     <button class="circle-btn" onclick="changeBackground()"></button>
                 </div>
@@ -43,7 +44,7 @@
                         <div>
                             <h1 class="text-xs ">Task Assigned</h1>
                             <!-- <span class="counter font-bold">06</span> -->
-                            <h1 onclick="increment()" class="text-2xl font-bold mb-4"><span id="count">6</span></h1>
+                            <h1 class="text-2xl font-bold mb-4"><span id="decreaseCounter">6</span></h1>
                         </div>
                     </div>
                 
@@ -80,7 +81,7 @@
                             <p class="text-gray-500">Deadline</p>
                             <p class="font-semibold text-gray-800">21 March 2025</p>
                         </div>
-                        <button onclick="increment()" onclick="incrementi()" class="click-button px-4 py-2 bg-blue-500 text-white rounded-lg cursor-pointer">Completed</button>
+                        <button onclick="updateCounters()" onclick="incrementi()" class="click-button px-4 py-2 bg-blue-500 text-white rounded-lg cursor-pointer">Completed</button>
                     </div>
                 </div>
 
@@ -95,7 +96,7 @@
                             <p class="text-gray-500">Deadline</p>
                             <p class="font-semibold text-gray-800">21 March 2025</p>
                         </div>
-                        <button onclick="increment()" class="click-button px-4 py-2 bg-blue-500 text-white rounded-lg cursor-pointer">Completed</button>
+                        <button onclick="updateCounters()" class="click-button px-4 py-2 bg-blue-500 text-white rounded-lg cursor-pointer">Completed</button>
                     </div>
                 </div>
 
@@ -110,7 +111,7 @@
                             <p class="text-gray-500">Deadline</p>
                             <p class="font-semibold text-gray-800">21 March 2025</p>
                         </div>
-                        <button onclick="increment()" class="click-button px-4 py-2 bg-blue-500 text-white rounded-lg cursor-pointer">Completed</button>
+                        <button onclick="updateCounters()" class="click-button px-4 py-2 bg-blue-500 text-white rounded-lg cursor-pointer">Completed</button>
                     </div>
                 </div>
 
@@ -126,7 +127,7 @@
                             <p class="text-gray-500">Deadline</p>
                             <p class="font-semibold text-gray-800">21 March 2025</p>
                         </div>
-                        <button onclick="increment()" class="click-button px-4 py-2 bg-blue-500 text-white rounded-lg cursor-pointer">Completed</button>
+                        <button onclick="updateCounters()" class="click-button px-4 py-2 bg-blue-500 text-white rounded-lg cursor-pointer">Completed</button>
                     </div>
                 </div>
 
@@ -142,7 +143,7 @@
                             <p class="text-gray-500">Deadline</p>
                             <p class="font-semibold text-gray-800">21 March 2025</p>
                         </div>
-                        <button onclick="increment()" class="click-button px-4 py-2 bg-blue-500 text-white rounded-lg cursor-pointer">Completed</button>
+                        <button onclick="updateCounters()" class="click-button px-4 py-2 bg-blue-500 text-white rounded-lg cursor-pointer">Completed</button>
                     </div>
                 </div>
 
@@ -159,7 +160,7 @@
                             <p class="font-semibold text-gray-800">21 March 2025</p>
                         </div>
                         <!-- <button class="px-3 py-1 text-sm font-semibold text-white bg-blue-600 rounded-lg btn btn-sm">Completed</button> -->
-                        <button id="c-button" onclick="increment()" class="click-button px-4 py-2 bg-blue-500 text-white rounded-lg cursor-pointer ">Completed</button>
+                        <button onclick="updateCounters()" class="click-button px-4 py-2 bg-blue-500 text-white rounded-lg cursor-pointer ">Completed</button>
                     </div>
                 </div>
             </section>
@@ -182,7 +183,8 @@
 
         </section>
     </main>
-    <script src="script/task.js"></script>
+    <script src="script/addtask.js"></script>
+    <!-- <script src="script/task.js"></script> -->
     <script src="script/history.js"></script>
     <script src="script/newpage.js"></script>
      <script src="script/utilities.js"></script>

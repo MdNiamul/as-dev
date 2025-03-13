@@ -4,16 +4,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const clearButton = document.getElementById("clear-history");
     
     const messages = [
-        "Fix Mobile Button Issue ",
-        "Add Dark Mode",
-        "Optimize  Home page ",
-        "Add new emoji 🤲",
-        "Integrate OpenAI API","Improve Job searching "
+        "You have completed the task Fix Mobile Button Issue ",
+        "You have completed the task Add Dark Mode",
+        "You have completed the task Optimize Home page",
+        "You have completed the task Add new emoji 🤲",
+        "You have completed the task Integrate OpenAI API",
+        "You have completed the task Improve Job searching "
     ];
+    
+    let completedTasks = 0;
     
     buttons.forEach((button, index) => {
         button.addEventListener("click", () => {
-            alert("Broad uptade successfully");
+            alert("Broad update successfully");
             const timestamp = new Date().toLocaleTimeString();
             const message = `${messages[index % messages.length]} - ${timestamp}`;
             const listItem = document.createElement("li");
@@ -22,12 +25,17 @@ document.addEventListener("DOMContentLoaded", () => {
             historyList.scrollTop = historyList.scrollHeight;
             button.disabled = true;
             button.classList.add("bg-gray-400");
+            
+            completedTasks++;
+            if (completedTasks === buttons.length) {
+                alert("Congrats!!! You have completed all the current tasks");
+            }
         });
     });
 
-   
     clearButton.addEventListener("click", () => {
         historyList.innerHTML = "";
+        completedTasks = 0;
         buttons.forEach(button => {
             button.disabled = false;
             button.classList.remove("bg-gray-400");
